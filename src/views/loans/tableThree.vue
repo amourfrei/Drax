@@ -273,19 +273,16 @@
 const columns = [
   { title: '申请单号', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },
   { title: '合同号', width: 100, dataIndex: 'age', key: 'age'},
-  { title: '申请时间', dataIndex: 'val1', key: '1', width: 150 },
+  { title: '复审通过时间', dataIndex: 'val1', key: '1', width: 150 },
   { title: '客户编号', dataIndex: 'val2', key: '2', width: 150 },
   { title: '客户名称', dataIndex: 'val3', key: '3', width: 150 },
-  { title: '提交人', dataIndex: 'val4', key: '4', width: 150 },
-  { title: '审批人', dataIndex: 'val5', key: '5', width: 150 },
+  { title: '提交人', dataIndex: 'val10', key: '3', width: 150 },
+  { title: '初审人', dataIndex: 'val4', key: '4', width: 150 },
+  { title: '复审人', dataIndex: 'val5', key: '5', width: 150 },
   { title: '产品名称', dataIndex: 'val6', key: '6', width: 150 },
   { title: '申请额度', dataIndex: 'val7', key: '7', width: 150 },
   { title: '贷款期限', dataIndex: 'val8', key: '8', width: 150 },
   { title: '日利率', dataIndex: 'val9', key: '9', width: 150 },
-  { title: '提交次数', dataIndex: 'val10', key: '10', width: 150 },
-  { title: '申请类型', dataIndex: 'val11', key: '11', width: 150 },
-  { title: '审批阶段', dataIndex: 'val12', key: '12', width: 150 },
-  { title: '状态', dataIndex: 'val13', key: '13', width: 150 },
   {
     title: '操作',
     key: 'operation',
@@ -295,25 +292,36 @@ const columns = [
   },
 ];
 
-const data = [];
-for (let i = 1; i < 100; i++) {
+const data = [{
+    key: 1,
+    name: `885`,
+    age: `130636`,
+    val1: '2019-4-25 18:26:42',
+    val2: `wangwu`,
+    val3: 'xxx公司',
+    val4: '张三',
+    val5: '李四',
+    val6: '企业贷',
+    val7: '500,000.00',
+    val8: '12个月',
+    val9: '0.05%',
+    val10: '赵二'
+}];
+for (let i = 2; i < 100; i++) {
   data.push({
     key: i,
-    name: `${i+i}`,
-    age: `${i+ '' +i}`,
-    val1: '2019-4-25',
-    val2: `${i}`,
-    val3: 'Bruno',
-    val4: 'Trunp',
-    val5: 'Linda',
-    val6: '白条',
-    val7: '80000',
-    val8: '12个月',
-    val9: '0.03%',
-    val10: '1',
-    val11: '额度变更',
-    val12: '业务初审',
-    val13: '已通过'
+    name: `${884+i}`,
+    age: `${130635+i}`,
+    val1: '2019-4-25 18:07:23',
+    val2: `zhangwei37`,
+    val3: 'xxx公司',
+    val4: '张三',
+    val5: '李四',
+    val6: '企业贷',
+    val7: '100,000,000.00',
+    val8: '6个月',
+    val9: '0.05%',
+    val10: '王五'
   });
 }
 

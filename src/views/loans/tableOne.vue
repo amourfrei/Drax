@@ -291,23 +291,40 @@ const columns = [
   },
 ];
 
-const data = [];
-for (let i = 1; i < 100; i++) {
+const data = [{
+    key: 1,
+    name: '885',
+    age: `130636`,
+    val1: '2019-4-25 08:12:51',
+    val2: `wangwu`,
+    val3: 'xxx公司',
+    val4: '赵二',
+    val5: '张三',
+    val6: '企业贷',
+    val7: '500,000.00',
+    val8: '12个月',
+    val9: '0.05%',
+    val10: '2',
+    val11: '额度变更',
+    val12: '风控审核',
+    val13: '已通过'
+  }];
+for (let i = 2; i < 100; i++) {
   data.push({
     key: i,
-    name: `${i+i}`,
-    age: `${i+ '' +i}`,
-    val1: '2019-4-25',
-    val2: `${i}`,
-    val3: 'Bruno',
-    val4: 'Trunp',
-    val5: 'Linda',
-    val6: '白条',
-    val7: '80000',
-    val8: '12个月',
-    val9: '0.03%',
+    name: `${884+i}`,
+    age: `${130635+i}`,
+    val1: '2019-4-25 18:07:23',
+    val2: `zhangwei37`,
+    val3: 'xxx公司',
+    val4: '王五',
+    val5: '张三',
+    val6: '企业贷',
+    val7: '100,000,000.00',
+    val8: '6个月',
+    val9: '0.05%',
     val10: '1',
-    val11: '额度变更',
+    val11: '新建',
     val12: '业务初审',
     val13: '已通过'
   });

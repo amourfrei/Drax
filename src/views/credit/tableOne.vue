@@ -268,7 +268,7 @@
 <script>
 const columns = [
   { title: '序号', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },
-  { title: '申请时间', dataIndex: 'val1', key: '1', width: 150 },
+  { title: '创建时间', dataIndex: 'val1', key: '1', width: 150 },
   { title: '贷款单编号', dataIndex: 'val2', key: '2', width: 150 },
   { title: '贷款单状态', dataIndex: 'val3', key: '3', width: 150 },
   { title: '客户编号', dataIndex: 'val4', key: '4', width: 150 },
@@ -285,25 +285,43 @@ const columns = [
   { title: '备注', dataIndex: 'val15', key: '15', width: 150 },
 ];
 
-const data = [];
-for (let i = 1; i < 100; i++) {
+const data = [{
+    key: 1,
+    name: '1',
+    val1: '2019-4-25 08:12:51',
+    val2: `443534534`,
+    val3: '已驳回',
+    val4: 'wangwu',
+    val5: 'xxx公司',
+    val6: 'xx小贷',
+    val7: '先息后本',
+    val8: '6个月',
+    val9: '0.05%',
+    val10: '1,000,000.00',
+    val11: '1,000,000.00',
+    val12: '1,090,000.00',
+    val13: '2019-4-25',
+    val14: '2019-10-25',
+    val15: '资料不全，有待补充'
+}];
+for (let i = 2; i < 100; i++) {
   data.push({
     key: i,
-    name: `${i+i}`,
-    val1: '2019-4-25',
-    val2: `${i}`,
-    val3: 'Bruno',
-    val4: 'Trunp',
-    val5: 'Linda',
-    val6: '白条',
-    val7: '80000',
+    name: `${i}`,
+    val1: '2019-4-25 18:07:23',
+    val2: `${443534534 + i}`,
+    val3: '已通过',
+    val4: 'zhangwei37',
+    val5: 'xxx公司',
+    val6: 'xx小贷',
+    val7: '等额本息',
     val8: '12个月',
-    val9: '0.03%',
-    val10: '1',
-    val11: '额度变更',
-    val12: '业务初审',
-    val13: '2018-10-09',
-    val14: '2020-10-08',
+    val9: '0.05%',
+    val10: '1,000,000.00',
+    val11: '500,000.00',
+    val12: '590,000.00',
+    val13: '2019-4-25',
+    val14: '2020-4-25',
     val15: '已通过'
   });
 }
