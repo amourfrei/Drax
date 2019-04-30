@@ -7,9 +7,30 @@ export const asyncRouterMap = [
     path: '/',
     name: 'index',
     component: BasicLayout,
-    meta: { title: '首页' },
+    meta: { title: '' },
     redirect: '/loans/check',
     children: [
+      //数据统计
+      {
+        path: '/stats',
+        redirect: '/stats/risk',
+        component: PageView,
+        meta: { title: '数据统计', icon: 'data', permission: ['form'] },
+        children: [
+          {
+            path: '/stats/risk',
+            name: 'StatsRisk',
+            component: () => import('@/views/stats/risk'),
+            meta: { title: '风控数据', keepAlive: true, permission: ['form'] }
+          },
+          {
+            path: '/stats/biz',
+            name: 'StatsBiz',
+            component: () => import('@/views/stats/biz'),
+            meta: { title: '业务运营数据', keepAlive: true, permission: ['form'] }
+          }
+        ]
+      },
       //贷款审批
       {
         path: '/loans',
