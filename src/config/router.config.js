@@ -15,7 +15,7 @@ export const asyncRouterMap = [
         path: '/stats',
         redirect: '/stats/risk',
         component: PageView,
-        meta: { title: '数据统计', icon: 'data', permission: ['form'] },
+        meta: { title: '数据统计', icon: 'slack', permission: ['form'] },
         children: [
           {
             path: '/stats/risk',
@@ -107,6 +107,21 @@ export const asyncRouterMap = [
             name: 'CreditThird',
             component: () => import('@/views/credit/financeRecord'),
             meta: { title: '放款财务审核日志', keepAlive: true, permission: ['form'] }
+          }
+        ]
+      },
+      //产品管理
+      {
+        path: '/prod',
+        redirect: '/prod/pub',
+        component: PageView,
+        meta: { title: '产品管理', icon: 'form', permission: ['form'] },
+        children: [
+          {
+            path: '/prod/pub',
+            name: 'ProdPub',
+            component: () => import('@/views/prod/publish'),
+            meta: { title: '产品发布', keepAlive: true, permission: ['form'] }
           }
         ]
       }

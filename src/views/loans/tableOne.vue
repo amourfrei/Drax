@@ -33,9 +33,11 @@
       @ok="handleOk2"
       :confirmLoading="confirmLoading2"
       @cancel="handleCancel2"
-      :width="900"
+      :width="1200"
     >
     <a-form layout="inline">
+    <a-row>
+    <a-col :md="16" :sm="24">
     <a-row>
       <a-col>
         <h3>授信人渠道</h3>
@@ -260,7 +262,11 @@
             </a-form-item>
           </a-col>
     </a-row>
-
+    </a-col>
+    <a-col :md="8" :sm="24">
+      <img width="100%" src="../../assets/sample-1.jpg"/>
+    </a-col>
+    </a-row>
     </a-form>
     </a-modal>
   </div>
